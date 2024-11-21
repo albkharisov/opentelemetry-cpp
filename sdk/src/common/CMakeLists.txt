@@ -15,7 +15,8 @@ set_target_version(opentelemetry_common)
 
 target_link_libraries(
   opentelemetry_common PUBLIC opentelemetry_api opentelemetry_sdk
-                              Threads::Threads)
+)
+#                              Threads::Threads)
 
 if(WITH_ABSEIL OR WITH_OTLP_GRPC)
   target_link_libraries(opentelemetry_common PUBLIC absl::strings)
